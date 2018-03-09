@@ -9,14 +9,14 @@ import * as pictureActions from '../../action/picture-actions'; //
     return (
       <div>
         <h1>Authorization SUCCESS!</h1>
-        {/* <p>{this.props.token}</p> */}
+        <PictureFrom onComplete={this.props.createPicture}/>
       </div>
     )
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  createPicture : picture => dispatch(pictureActions.CreateActionRequest(picture)),
+  createPicture : picture => dispatch(pictureActions.createActionRequest(picture)),
 });
 
 export default connect(null, mapDispatchToProps)(Dashboard)
